@@ -61,9 +61,8 @@ def main():
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 return
-            if event.type == pygame.KEYDOWN:
-                if event.key == pygame.K_ESCAPE:
-                    return
+            if event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
+                return
 
         # move ball
         ball.move_ip(ball_speed)
